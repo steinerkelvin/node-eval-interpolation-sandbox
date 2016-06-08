@@ -20,6 +20,7 @@
   "bugs": {
     "url": "https://github.com/kelvinss/node-eval-interpolation-sandbox/issues"
   },
+  "tonicExampleFilename": "example.js",
   "directories": {
     "test": "test"
   },
