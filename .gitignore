@@ -1,0 +1,7 @@
+
+*~
+.directory
+
+node_modules/
+
+*.js.map

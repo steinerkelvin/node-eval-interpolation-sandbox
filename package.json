@@ -1,0 +1,38 @@
+{
+  "name": "eval-interpolation-sandbox",
+  "version": "0.0.1",
+  "description": "Javascript string interpolation with sanboxed JS code",
+  "main": "index.js",
+  "keywords": [
+    "template",
+    "format",
+    "interpolation",
+    "eval",
+    "sandbox"
+  ],
+  "author": "Kelvin Steiner",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kelvinss/node-eval-interpolation-sandbox.git"
+  },
+  "homepage": "https://github.com/kelvinss/node-eval-interpolation-sandbox",
+  "bugs": {
+    "url": "https://github.com/kelvinss/node-eval-interpolation-sandbox/issues"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "coffee --map -c ./; mocha"
+  },
+  "dependencies": {
+    "clone": "^1.0.2",
+    "async-replace": "^1.0.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3",
+    "source-map-support": "^0.4.0"
+  }
+}
