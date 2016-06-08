@@ -1,6 +1,6 @@
 
 # node-eval-interpolation-sandbox
-Interpolate strings with sanboxed JS code
+Interpolate strings with sandboxed JS code
 
 ## Example
     parseTemplate = require('eval-interpolation-sandbox')
@@ -22,7 +22,7 @@ Interpolate strings with sanboxed JS code
 
 ## Install
 
-    npm install https://github.com/kelvinss/node-eval-interpolation-sandbox.git
+    npm install eval-interpolation-sandbox
 
 ## API
   To get the synchronous parser function with default options, just import the package root:
