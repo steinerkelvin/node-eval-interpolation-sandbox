@@ -1,5 +1,9 @@
 
 # node-eval-interpolation-sandbox
+
+[![Travis](https://img.shields.io/travis/kelvinss/node-eval-interpolation-sandbox.svg?maxAge=2592000)](https://travis-ci.org/kelvinss/node-eval-interpolation-sandbox)
+[![npm](https://img.shields.io/npm/v/eval-interpolation-sandbox.svg?maxAge=2592000)](https://www.npmjs.com/package/eval-interpolation-sandbox)
+
 Interpolate strings with sandboxed JS code
 
 ## Example
