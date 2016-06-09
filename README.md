@@ -77,8 +77,10 @@ parserAsync.parseTemplate( "#{value}", {value: 42}, function(err,res){ console.l
   Accepts a string, which will define both delimiters, or an array with two strings,
   which will define the left and right delimiters, respectively.
 
-      parseTemplate( "\'value\'", {value: 42}, { delimiter: "\'" } )
-      parseTemplate( "\#{value}", {value: 42}, { delimiter: ["\#{", "}"] } )
+  ```js
+  parseTemplate( "\'value\'", {value: 42}, { delimiter: "\'" } )
+  parseTemplate( "\#{value}", {value: 42}, { delimiter: ["\#{", "}"] } )
+  ```
 
 
 ### ParserSync([opts])
@@ -88,4 +90,4 @@ the `ignore` option.
 
 #### parseTemplate( template, context, [opts] )
 
-opts: {sandbox, delimiter}
+`opts`: {sandbox=0, delimiter="`"}
