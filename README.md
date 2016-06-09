@@ -3,41 +3,48 @@
 Interpolate strings with sandboxed JS code
 
 ## Example
-    parseTemplate = require('eval-interpolation-sandbox')
+```js
+parseTemplate = require('eval-interpolation-sandbox')
 
-    parseTemplate( "`name`", {name: "John"} )
-    > 'John'
+parseTemplate( "`name`", {name: "John"} )
+// 'John'
 
-    parseTemplate( "`name.join(' ')`", {name: ["John", "Locke"]} )
-    > 'John Locke'
+parseTemplate( "`name.join(' ')`", {name: ["John", "Locke"]} )
+// 'John Locke'
 
-    parseTemplate( "`++i`; `++i`; `++i`", {i:0} )
-    > '1; 2; 3'
+parseTemplate( "`++i`; `++i`; `++i`", {i:0} )
+// '1; 2; 3'
 
-    context = { i:0, names: ["John", "Paul"] }
-    parseTemplate( "`++i` - `names.pop(0)`", context )
-    parseTemplate( "`++i` - `names.pop(0)`", context )
-    > 1 - Paul
-    > 2 - John
+context = { i:0, names: ["John", "Paul"] }
+parseTemplate( "`++i` - `names.shift()`", context )
+parseTemplate( "`++i` - `names.shift()`", context )
+// '1 - John'
+// '2 - Paul'
+```
 
 ## Install
 
     npm install eval-interpolation-sandbox
 
 ## API
+
   To get the synchronous parser function with default options, just import the package root:
 
-    parseTemplate = require('eval-interpolation-sandbox')
+```js
+parseTemplate = require('eval-interpolation-sandbox')
 
-    result = parseTemplate( "`name.join(\" \")`", {name: ["Paul", "Jefferson"]} )  // 'Paul Jefferson'
+result = parseTemplate( "`name.join(\" \")`", {name: ["Paul", "Jefferson"]} )  // 'Paul Jefferson'
+```
 
   To get the asynchronous parser, or set custom defalut options
 
-    ParserSync = parseTemplate.ParserSync
-    ParserAsync = parseTemplate.ParserAsync
+```js
+ParserSync = parseTemplate.ParserSync
+ParserAsync = parseTemplate.ParserAsync
 
-    parserAsync = new ParserAsync( {delimiter: ["\#{", "}"]} )
-    parserAsync.parseTemplate( "#{value}", {value: 42}, function(err,res){ console.log(res) } ) // '42'
+parserAsync = new ParserAsync( {delimiter: ["\#{", "}"]} )
+parserAsync.parseTemplate( "#{value}", {value: 42}, function(err,res){ console.log(res) } ) // '42'
+```
 
 ### ParserAsync([opts])
 
@@ -81,4 +88,4 @@ the `ignore` option.
 
 #### parseTemplate( template, context, [opts] )
 
-opts: {sandbox, delimiter, leftDelimiter, rightDelimiter}
+opts: {sandbox, delimiter}
