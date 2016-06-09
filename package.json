@@ -1,6 +1,6 @@
 {
   "name": "eval-interpolation-sandbox",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Javascript string interpolation with sandboxed JS code",
   "main": "index.js",
   "keywords": [
